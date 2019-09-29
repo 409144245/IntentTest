@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.intenttest">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--AndroidMainfest中增加该Activity的声明-->
+        <activity android:name=".SecondActivity">
+        </activity>
+        <activity android:name=".ThirdActivity">
+            <intent-filter>
+                <action android:name="com.example.IntentTest.ACTION_TEST"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="aaa"/>
+                <data android:scheme="baidu" android:host="www.baidu.com" android:path="/nihaonihao"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
